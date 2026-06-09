@@ -1,2 +1,115 @@
 # CrossAligner-Food
-Expert-curated gold standard benchmark for multi-perspective ontology alignment in the food domain.
+
+**A Gold Standard Benchmark for Multi-Perspective Food Ontology Alignment**
+
+CrossAligner-Food is an expert-curated gold standard benchmark for ontology alignment in the food domain. The benchmark consists of three complementary food-related ontologies and focuses on identifying meaningful semantic bridges across heterogeneous perspectives of the same domain.
+
+Existing benchmark tracks primarily focus on equivalence and subsumption relations between ontologies with overlapping domains and similar modeling objectives. In contrast, the CrossAligner-Food dataset support the study of how different ontology perspectives can be related while preserving their conceptual distinctions.
+This makes the dataset useful for studying alignments where related concepts can be linked without being forced into a single meaning.
+
+
+## Overview
+The benchmark is constructed from three existing ontologies representing complementary perspectives of the food domain from BioPortal.
+
+Table 1. summarizes the perspectives represented by the selected ontologies.
+
+| Ontology | Perspective | Example Concepts |
+|----------|-------------|------------------|
+| **ONS** | Food material and diet | vegan diet, plant food product |
+| **OccO** | Food-service occupations | chef or head cook, waiter, bartender |
+| **MeSH** | Food quality and public health | food contamination, food labeling |
+
+
+
+
+Ontology subsets were extracted from the selected ontologies using ROBOT (http://robot.obolibrary.org/). 
+
+Table 2. Statistics summary of the extracted ontology subsets.
+
+| Ontology Subset | Classes | Object Properties | Data Properties | Definitions | Restrictions |
+| --------------- | ------- | ----------------- | --------------- | ----------- | ------------ |
+| ONS             | 26      | 4                 | 0               | 26          | 12           |
+| OccO            | 52      | 12                | 1               | 45          | 71           |
+| MeSH            | 13      | 0                 | 0               | 13          | 0            |
+
+
+---
+
+## Repository Structure
+
+```text
+CrossAligner-Food/
+│
+├── dataset/
+│   ├── gold_standard.csv
+│   └── gold_standard.xlsx
+│
+├── ontology_subsets/
+│   ├── ONS/
+│   ├── MeSH/
+│   └── OccO/
+│
+├── metadata/
+│   ├── ONS_metadata.xlsx
+│   ├── MeSH_metadata.xlsx
+│   └── OccO_metadata.xlsx
+│
+├── expert_annotations/
+│
+├── methodology/
+│
+├── figures/
+│
+├── README.md
+└── LICENSE
+```
+
+---
+
+## Dataset Construction Workflow
+
+The benchmark was developed through a multi-stage expert-driven process:
+
+1. Selection of ontology subsets from ONS, MeSH, and OccO.
+2. Extraction of concept metadata, including labels, definitions, hierarchy, and restrictions.
+3. Identification of candidate concept pairs across ontology perspectives.
+4. Independent expert analysis of candidate pairs.
+5. Expert justification of semantic relationships.
+6. Consensus-based review and conflict resolution.
+7. Creation of the final gold-standard benchmark.
+
+---
+
+## Citation
+
+If you use CrossAligner-Food in your research, please cite:
+
+```bibtex
+@misc{crossalignerfood,
+  title={CrossAligner-Food: A Gold Standard Benchmark for Multi-Perspective Food Ontology Alignment},
+  author={Naik, Divyasha and collaborators},
+  year={2026}
+}
+```
+
+A complete citation will be added upon publication.
+
+---
+
+## License
+
+Code contained in this repository is distributed under the Apache License 2.0.
+
+Dataset resources are intended for academic research and educational purposes. Please cite the repository when using the dataset in scientific publications.
+
+---
+
+## Contact
+
+For questions, suggestions, or collaboration opportunities, please open an issue in this repository.
+
+
+
+
+
+
