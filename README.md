@@ -37,7 +37,7 @@ Table 2. Statistics summary of the extracted ontology subsets.
 
 ## Workflow Overview
 
-![CrossAligner-Food Workflow](figures/Workflow.png)
+![CrossAligner-Food Workflow](figure/Workflow.png)
 
 **Figure 1.** Workflow used to construct the CrossAligner-Food benchmark.
 
