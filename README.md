@@ -11,7 +11,7 @@ This makes the dataset useful for studying alignments where related concepts can
 ## Overview
 The benchmark is constructed from three existing ontologies representing complementary perspectives of the food domain from BioPortal.
 
-Table 1. summarizes the perspectives represented by the selected ontologies.
+Table 1. Summarizes the perspectives represented by the selected ontologies.
 
 | Ontology | Perspective | Example Concepts |
 |----------|-------------|------------------|
@@ -35,79 +35,13 @@ Table 2. Statistics summary of the extracted ontology subsets.
 
 ---
 
-## Repository Structure
+## Workflow Overview
 
-```text
-CrossAligner-Food/
-│
-├── dataset/
-│   ├── gold_standard.csv
-│   └── gold_standard.xlsx
-│
-├── ontology_subsets/
-│   ├── ONS/
-│   ├── MeSH/
-│   └── OccO/
-│
-├── metadata/
-│   ├── ONS_metadata.xlsx
-│   ├── MeSH_metadata.xlsx
-│   └── OccO_metadata.xlsx
-│
-├── expert_annotations/
-│
-├── methodology/
-│
-├── figures/
-│
-├── README.md
-└── LICENSE
-```
+![CrossAligner-Food Workflow](figures/Workflow.png)
+
+**Figure 1.** Workflow used to construct the CrossAligner-Food benchmark.
 
 ---
-
-## Dataset Construction Workflow
-
-The benchmark was developed through a multi-stage expert-driven process:
-
-1. Selection of ontology subsets from ONS, MeSH, and OccO.
-2. Extraction of concept metadata, including labels, definitions, hierarchy, and restrictions.
-3. Identification of candidate concept pairs across ontology perspectives.
-4. Independent expert analysis of candidate pairs.
-5. Expert justification of semantic relationships.
-6. Consensus-based review and conflict resolution.
-7. Creation of the final gold-standard benchmark.
-
----
-
-## Citation
-
-If you use CrossAligner-Food in your research, please cite:
-
-```bibtex
-@misc{crossalignerfood,
-  title={CrossAligner-Food: A Gold Standard Benchmark for Multi-Perspective Food Ontology Alignment},
-  author={Naik, Divyasha and collaborators},
-  year={2026}
-}
-```
-
-A complete citation will be added upon publication.
-
----
-
-## License
-
-Code contained in this repository is distributed under the Apache License 2.0.
-
-Dataset resources are intended for academic research and educational purposes. Please cite the repository when using the dataset in scientific publications.
-
----
-
-## Contact
-
-For questions, suggestions, or collaboration opportunities, please open an issue in this repository.
-
 
 
 
